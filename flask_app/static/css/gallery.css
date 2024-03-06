@@ -1,0 +1,195 @@
+/* ALL */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ACE1AF;
+}
+
+
+/* HEADER */
+#topheader {
+    display: flex;
+    justify-content: space-between;
+}
+
+#galleryreturnbutton {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+#returnbutton {
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    color: wheat;
+    background-color: #73A8C2;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+strong {
+    background-color: #73A8C2;
+}
+
+#galleryheader {
+    display: flex;
+    justify-content: center;
+}
+
+#galleryheadertext {
+    color: black;
+    font-size: 50px;
+}
+
+
+
+/* IMAGES */
+img {
+    font-size: 25px;
+    background-color: #ACE1AF;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+    position: relative;
+    margin: 0px 5%;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+    cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+    font-size: 50px;
+    text-align: center;
+    background-color: #ACE1AF;
+    padding: 2px 16px;
+    color: black;
+}
+
+/* Six columns side by side */
+.column {
+    float: left;
+    width: 16.66%; /* Adjust width as needed */
+    padding: 5px;
+    height: 200px; /* Set a fixed height for thumbnail image containers */
+    overflow: hidden; /* Ensure images don't overflow container */
+}
+
+/* Ensure images maintain aspect ratio */
+.column img {
+    width: auto;
+    height: 100%; /* Fill the container vertically */
+    cursor: pointer;
+}
+
+/* Add clearfix to clear floats */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+
+
+/* FOOTER */
+.content-footer {
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  margin: 50px 0;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #73A8C2;
+  text-decoration: none;
+  color: beige;
+}
+
+.social > li {
+    display: inline-block;
+    margin: 0 5px;
+    background-color: #73A8C2;
+}
+
+#returnbutton {
+    color: beige;
+    background-color: #73A8C2;
+    border: 0px;
+    font-size: 1em;
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+    text-decoration: none;
+}
+
+.footertext {
+    background-color: #73A8C2;
+    text-decoration: none;
+    font-size: 1em;
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.footerlinks {
+    background-color: #73A8C2;
+    font-weight: bold;
+    text-decoration: none;
+    color: #F1C863;
+    font-size: 1em;
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}

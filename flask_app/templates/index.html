@@ -3,76 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <title>Event time!!!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <title>Eli's Website :)</title>
 </head>
 <body>
-    <h1>Event Time</h1>
+    <div id="fullbody">
+        <div class="bodyblock">
+            <div id="dashboardheading">
+                <div id="headerblock1">
+                    <h1>Patrick "Eli" Schwarz</h1>
+                </div>
+                <div id="headerblock2">
+                    <h3><a href="/tableau">Tableau</a></h3>
+                </div>
+                <div id="headerblock2">
+                    <h3><a href="/aboutMe">About Me</a></h3>
+                </div>
+                <div id="headerblock2">
+                    <h3><a href="/gallery">Gallery</a></h3>
+                </div>
+                <div id="headerblock2">
+                    <h3><a href="/calendar">Calendar</a></h3>
+                </div>
+                <div id="headerblock2">
+                    <h3><a href="/contact">Contact</a></h3>
+                </div>
+            </div>
+        </div>
 
-    <div>
-        <h2>Login</h2>
-        <form action="/users/login/process" method="post">
-            <div>
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email">
-                {% for message in get_flashed_messages(category_filter=['err_users_email_login']) %}
-                <p class="err-msg">{{message}}</p>
-                {% endfor %}
+        <div class="bodyblock">
+            <div id="bodycontainer">
+                <div id="bodytext">
+                    <div class="bodyblock">
+                        <div class="bodyheading">
+                            <h2>Introduction</h2>
+                        </div>
+                        <div id="bodybody">
+                            <p>Hello, and welcome to my website!</p>
+                            <p>My name is Patrick Schwarz, but I go by "Eli". I am 26 years old and live in Seattle, WA. My hobbies include spending time with my dog, exploring the different neighborhoods of Seattle, going hiking, and listening to live music. In my free time on weekdays, I like to take my dog, Frankie, on walks at Seward Park or play videogames during rainy days. On weekends, whenever I have time for larger hikes, I enjoy driving to Index, WA, where I can grab a cup of coffee from Espresso Chalet and then explore local trails like Heybrook Lookout or Lake Serene & Bridal Veil Falls.</p>
+                        </div>
+                    </div>
+                    <div class="bodyblock">
+                        <div class="bodyheading">
+                            <h2>Background</h2>
+                        </div>
+                        <div id="bodybody">
+                            <p>I am a tech-savvy professional with a diverse skill set ranging from programming languages like Java, JavaScript, and Python to web development frameworks such as Spring Boot and Express. With a background in Business Administration and Accounting, complemented by minors in Mandarin Chinese and Gender, Women’s, and Sexuality Studies, I bring a unique blend of analytical acumen and cultural competency to my work. My previous experience as a Digital Commerce Analyst at G2 Web Services LLC, where I spearheaded key initiatives like the "Google Health Insurance Providers Certification" program, reflect my ability to excel in dynamic environments and drive impactful results. Additionally, my recent completion of an intensive coding bootcamp further demonstrates my dedication to continuous learning and mastery of cutting-edge technologies. My passion for innovation, coupled with my commitment to excellence, position me as a valuable asset poised to make significant contributions in any tech-driven domain.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bodyblock">
+                        <div class="bodyheading">
+                            <h2>Purpose</h2>
+                        </div>
+                        <div id="bodybody">
+                            <p>The purpose of this website is to serve as a way to get to know me. The "Tableau" section will include some projects that I have built using Tableau, the "About Me" page will detail my education and technical skills, the "Gallery" page will show pictures I have taken while doing my favorite hobbies, and the "Contact" section will allow you to complete a contact form should you wish to reach out.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="bodyimage">
+                    <img src="templates/eliportugal.jpg" alt="Me in 2023"/>
+                    <p id="bodyimageplaceholder">insert image</p>
+                </div>
             </div>
-            <div>
-                <label for="password">Password</label>
-                <input type="text" name="password" id="password">
-                {% for message in get_flashed_messages(category_filter=['err_users_password_login']) %}
-                <p class="err-msg">{{message}}</p>
-                {% endfor %}
-            </div>
-            <button>Login</button>
-        </form>
+        </div>
+
+        <footer class="content-footer">
+            <p class="footertext">Connect with me on these networks:</p>
+            <ul class="social">
+                <li><a class="footerlinks" href="https://github.com/rocketeli1/20240226_Portfolio">GitHub</a></li>
+                <li><a class="footerlinks" href="https://public.tableau.com/app/profile/patrick.schwarz/vizzes">Tableau</a></li>
+                <li><a class="footerlinks" href="https://www.linkedin.com/in/patrick-e-schwarz/">LinkedIn</a></li>
+            </ul>
+        </footer>
     </div>
-
-    <div>
-        <h2>Register</h2>
-        <form action="/users/create" method="post"">
-            <div>
-                <label for="first_name">first_name</label>
-                <input type="text" name="first_name" id="first_name">
-                {% for message in get_flashed_messages(category_filter=['err_users_first_name']) %}
-                <p class="err-msg">{{message}}</p>
-                {% endfor %}
-            </div>
-            <div>
-                <label for="last_name">last_name</label>
-                <input type="text" name="last_name" id="last_name">
-                {% for message in get_flashed_messages(category_filter=['err_users_last_name']) %}
-                <p class="err-msg">{{message}}</p>
-                {% endfor %}
-            </div>
-            <div>
-                <label for="email">email</label>
-                <input type="text" name="email" id="email">
-                {% for message in get_flashed_messages(category_filter=['err_users_email']) %}
-                <p class="err-msg">{{message}}</p>
-                {% endfor %}
-            </div>
-            <div>
-                <label for="password">password</label>
-                <input type="text" name="password" id="password">
-                {% for message in get_flashed_messages(category_filter=['err_users_password']) %}
-                <p class="err-msg">{{message}}</p>
-                {% endfor %}
-            </div>
-            <div>
-                <label for="confirm_password">confirm_password</label>
-                <input type="text" name="confirm_password" id="confirm_password">
-                {% for message in get_flashed_messages(category_filter=['err_users_confirm_password']) %}
-                <p class="err-msg">{{message}}</p>
-                {% endfor %}
-            </div>
-            <button>Register</button>
-        </form>
-    </div>
-
-
+    
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Calendar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/calendar_add_event.css') }}">
+</head>
+<body>
+    <div id="add_event_body">
+        <h1>Add Event</h1>
+        <form action="/calendar/add_event" method="post" id="event-form">
+            <input type="hidden" name="user_id" value="{{ session['uuid'] }}">
+            <label for="name">Event Name: </label>
+            <input type="text" name="name">
+            <label for="location">Event Location: </label>
+            <input type="text" name="location">
+            <label for="description">Event Description: </label>
+            <input type="text" name="description">
+            <label for="calendar_date">Event Date: </label>
+            <input type="date" name="calendar_date">
+            <label for="calendar_time">Event Time: </label>
+            <input type="time" name="calendar_time">
+            <button>Submit</button>
+        </form>
+    </div>
+</body>
+</html>

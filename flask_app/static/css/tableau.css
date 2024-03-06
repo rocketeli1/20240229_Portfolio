@@ -1,0 +1,87 @@
+/* ALL */
+body {
+    background-color: beige;
+}
+
+
+
+/* HEADING */
+#tableauheading {
+    margin: 2em 6em;
+}
+
+.tableauheadingheader {
+    font-size: 50px;
+    margin: 0px;
+}
+
+.tableauheadingtext {
+    font-size: 20px;
+}
+
+
+
+/* TABLEAU TABLES */
+#tableautablecontainer {
+    margin: 2em 6em;
+}
+
+.tableautable {
+    margin: 0 5em;
+}
+
+.tableauPlaceholder {
+    border: 1px solid black;
+}
+
+hr {
+    background-color: black;
+    color: black;
+    height: 3px;
+}
+
+
+
+/* FOOTER */
+.content-footer {
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    margin: 50px 0;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #73A8C2;
+    text-decoration: none;
+    color: beige;
+}
+
+.social > li {
+    display: inline-block;
+    margin: 0 5px;
+    background-color: #73A8C2;
+}
+
+#returnbutton {
+    color: beige;
+    background-color: #73A8C2;
+    border: 0px;
+    font-size: 1em;
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+    text-decoration: none;
+}
+
+.footertext {
+    background-color: #73A8C2;
+    text-decoration: none;
+    font-size: 1em;
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.footerlinks {
+    background-color: #73A8C2;
+    font-weight: bold;
+    text-decoration: none;
+    color: #F1C863;
+    font-size: 1em;
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}

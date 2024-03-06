@@ -1,0 +1,99 @@
+/* ALL */
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+/* CALENDAR */
+#calendar {
+    display: grid;
+    grid-template-rows: auto 1fr; /* Added */
+    gap: 5px;
+}
+
+.header-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    justify-items: center; /* Centering the header cells */
+}
+
+.header {
+    text-align: center;
+    font-weight: bold;
+}
+
+.week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day {
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: right;
+    height: 75px;
+}
+
+#event-form {
+    margin-top: 20px;
+}
+
+
+/* BUTTONS */
+#buttondiv {
+    display: flex;
+}
+
+#next-month, #prev-month {
+    margin: 0px 5px 5px;
+}
+
+#calendar_logout, #create_event_button {
+    margin: 20px 5px;
+}
+
+/* FOOTER */
+.content-footer {
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    margin: 50px 0;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #73A8C2;
+    text-decoration: none;
+    color: beige;
+  }
+  
+  .social > li {
+      display: inline-block;
+      margin: 0 5px;
+      background-color: #73A8C2;
+  }
+  
+  #returnbutton {
+      color: beige;
+      background-color: #73A8C2;
+      border: 0px;
+      font-size: 1em;
+      font-family: "Open Sans", "Helvetica Neue", sans-serif;
+      text-decoration: none;
+  }
+  
+  .footertext {
+      background-color: #73A8C2;
+      text-decoration: none;
+      font-size: 1em;
+      font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  
+  .footerlinks {
+      background-color: #73A8C2;
+      font-weight: bold;
+      text-decoration: none;
+      color: #F1C863;
+      font-size: 1em;
+      font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  }

@@ -1,0 +1,156 @@
+/* ALL */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.bodyblock {
+    margin: 20px 0;
+}
+
+h1, h2, h3, p, img {
+    color: white;
+}
+
+/* HEADER */
+#dashboardheading {
+    background-color: darkslategray;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px black;
+    border-radius: 20px;
+}
+
+#headerblock1, #headerblock2 {
+    display: block;
+    padding: 0px 15px;
+}
+
+#headerblock1 {
+    width: 65%;
+}
+
+/* BODY */
+#bodycontainer {
+    display: flex;
+    width: 90%;
+    margin: 0px 5%;
+}
+
+#bodytext {
+    width: 40%;
+    margin: 0px 5%;
+}
+
+.bodyblock {
+    width: 100%;
+}
+
+.bodybody {
+    width: 100%;
+}
+
+#bodyimage {
+    width: 40%;
+    height: auto;
+    margin: 0px 5%;
+    display: block;
+    background-color: gray;
+}
+
+#bodyimageplaceholder {
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    width: auto;
+}
+
+/* FOOTER */
+#footercontainer {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0px 5%;
+}
+
+#footertext1, #footertext2 {
+    width: 40%;
+    margin: 0px 5%;
+}
+
+#footertext2 {
+    display: flex;
+    justify-content: right;
+}
+
+/* FOOTER */
+.content-footer {
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    margin: 50px 0px;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #73A8C2;
+    text-decoration: none;
+    color: beige;
+}
+
+.social > li {
+    display: inline-block;
+    margin: 0 5px;
+    background-color: #73A8C2;
+}
+
+#returnbutton {
+    color: beige;
+    background-color: #73A8C2;
+    border: 0px;
+    font-size: 1em;
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+    text-decoration: none;
+}
+
+.footertext {
+    background-color: #73A8C2;
+    text-decoration: none;
+    font-size: 1em;
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.footerlinks {
+    background-color: #73A8C2;
+    font-weight: bold;
+    text-decoration: none;
+    color: #F1C863;
+    font-size: 1em;
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+
+
+/* REMOVED STUFF */
+/* #fullbody {
+    display: block;
+    width: 100%;
+    height: 100%;
+} */
+
+/* .bodyblock {
+    width: 100%;
+    height: auto;
+    display: block;
+} */

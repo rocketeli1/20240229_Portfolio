@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+}
+label {
+    font-weight: bold;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+textarea {
+    resize: vertical;
+    height: 150px;
+}
+input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* FOOTER */
+.content-footer {
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    margin: 50px 0;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #73A8C2;
+    text-decoration: none;
+    color: beige;
+}
+
+.social > li {
+    display: inline-block;
+    margin: 0 5px;
+    background-color: #73A8C2;
+}
+
+#returnbutton {
+    color: beige;
+    background-color: #73A8C2;
+    border: 0px;
+    font-size: 1em;
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+    text-decoration: none;
+}
+
+.footertext {
+    background-color: #73A8C2;
+    text-decoration: none;
+    font-size: 1em;
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.footerlinks {
+    background-color: #73A8C2;
+    font-weight: bold;
+    text-decoration: none;
+    color: #F1C863;
+    font-size: 1em;
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}

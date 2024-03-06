@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+</head>
+<body>
+    <div>
+        <div class="container">
+            <h1>Contact Form</h1>
+            <form id="contactForm" action="/contact" method="post">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+                
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
+                
+                <label for="date">Date:</label><br>
+                <input type="text" id="date" name="date" readonly><br>
+                
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <footer class="content-footer">
+            <p class="footertext">Say hi to me on these social networks:</p>
+            <ul class="social">
+                <li><a class="footerlinks" href="_INSERT_GITHUB_URL_HERE_">GitHub</a></li>
+                <li><a class="footerlinks" href="_INSERT_TWITTER_URL_HERE_">Twitter</a></li>
+                <li><a class="footerlinks" href="_INSERT_GOOGLE+_URL_HERE_">Google+</a></li>
+            </ul>
+            <a href="/" id="returnbutton">Return</a>
+        </footer>
+    </div>
+    
+    <script>
+        // Automatically generate the date
+        document.getElementById('date').value = new Date().toISOString().slice(0, 10);
+        
+        // Add event listener for form submission
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            // Prevent default form submission
+            event.preventDefault();
+            
+            // Submit the form via AJAX or simply redirect
+            // For demonstration purpose, let's simulate a redirect after 2 seconds
+            setTimeout(function() {
+                window.location.href = "/contact?success=true";
+            }, 2000);
+        });
+        
+        // Check if there's a success parameter in the URL and show alert
+        const urlParams = new URLSearchParams(window.location.search);
+        const successParam = urlParams.get('success');
+        if (successParam === 'true') {
+            alert("Form submitted successfully!");
+        }
+    </script>
+</body>
+</html>
