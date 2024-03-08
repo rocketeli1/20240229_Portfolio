@@ -1,11 +1,12 @@
 from flask import Flask, jsonify, render_template, redirect, request, session
 from flask_app import app
 from flask_app.models.model_calendar import Calendar
+from flask_app.models.model_user import User
 
 @app.route('/calendar')
 def calendar():
     events = Calendar.get_all()
-    return render_template('calendar_signed_in.html', events=events)
+    return render_template('calendar.html', events=events)
 
 @app.route('/calendar/add_event')
 def calendarAddEvent():
@@ -39,7 +40,21 @@ def get_events():
     # Serialize events data to dictionary
     serialized_events = [{
         'name': event.name,
+        'user_id': event.user_id,
         'calendar_date': event.calendar_date.strftime('%Y-%m-%d')  # Convert datetime object to string
     } for event in events]
 
     return jsonify(serialized_events)
+
+@app.route('/calendar/<int:id>/edit')
+def calendar_edit(id):
+    one_calendar = Calendar.get_one_calendar({'id':id})
+    loggedin_user = User.get_one_user({'id': session['uuid']})
+    return render_template('edit_calendar.html', one_calendar=one_calendar, loggedin_user=loggedin_user)
+
+@app.route('/calendar/<int:id>/delete')
+def calendars_delete(id):
+    if 'uuid' not in session:
+        return redirect('/calendar')
+    Calendar.delete_one(id)
+    return redirect('/calendar')

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/calendar_signed_in.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/calendar.css') }}">
 </head>
 <body>
 <body>
@@ -14,7 +14,15 @@
     <div id="calendar">
         <!-- Render events -->
         {% for event in events %}
-            <div class="event" data-day="{{ event.calendar_date.day }}">{{ event.name }}</div>
+            <div class="event">
+                <div class="eventcontainer">
+                    <p>{{ event.name }}</p>
+                    {% if event.user_id == session['uuid'] %}
+                        <a href="/calendar/<int:id>/edit">Edit</a>
+                        <a href="/calendar/<int:id>/delete">Delete</a>
+                    {% endif %}
+                </div>
+            </div>
         {% endfor %}
     </div>
     
@@ -44,6 +52,6 @@
         </ul>
         <a href="/" id="returnbutton">Return</a>
     </footer>
-    <script src="{{ url_for('static', filename='js/calendar_signed_in.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/calendar.js') }}"></script>
 </body>
 </html>

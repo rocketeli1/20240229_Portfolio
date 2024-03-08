@@ -40,6 +40,26 @@ body {
     margin-top: 20px;
 }
 
+.event {
+    position: relative;
+    display: block;
+    background-color: #e0e0e0;
+    padding: 2px 5px;
+    margin-bottom: 2px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    text-align: left; /* Align text content to the left */
+}
+.eventcontainer {
+    display: flex;
+}
+
+.eventcontainer a {
+    display: flex;
+}
+
+
 
 /* BUTTONS */
 #buttondiv {

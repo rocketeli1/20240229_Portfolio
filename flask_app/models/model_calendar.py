@@ -42,7 +42,7 @@ class Calendar:
 
     # READ ONE
     @classmethod
-    def get_one(cls, data:dict):
+    def get_one_calendar(cls, data:dict):
         #! #TODO change calendars to the table name
         query = "SELECT * FROM calendars WHERE id = %(id)s;"
         results = connectToMySQL(db).query_db(query, data)
